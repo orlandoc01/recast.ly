@@ -14,7 +14,7 @@ class Search extends React.Component {
 
     return (
       <div className="search-bar form-inline">
-      <input className="form-control" type="text" onKeyDown={videoSearch.bind(this)}/>
+      <input className="form-control" type="text" onKeyUp={videoSearch.bind(this)}/>
       <button className="btn hidden-sm-down">
         <span className="glyphicon glyphicon-search"></span>
       </button>

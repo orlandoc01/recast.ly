@@ -16,12 +16,21 @@ class App extends React.Component {
   }
 
   grabVideos(options) {
-    window.searchYouTube(options, (queryResponse) => {
-      this.setState({
-        videoList: queryResponse.items,
-        nowPlaying: queryResponse.items[0]
+    var {q: queryText} = options;
+    if(queryText !== "") { 
+      window.searchYouTube(options, (queryResponse) => {
+        this.setState({
+          videoList: queryResponse.items,
+          nowPlaying: queryResponse.items[0]
+        });
       });
-    });
+    }
+    else {
+      this.setState({
+        nowPlaying: null
+      });
+
+    }
   };
 
 
