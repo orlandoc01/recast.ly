@@ -30,7 +30,6 @@ class App extends React.Component {
         nowPlaying: null,
         videoList: null
       });
-
     }
   };
 
@@ -38,7 +37,7 @@ class App extends React.Component {
   render() {
 
     return (<div>
-    <Nav keyDown={this.grabVideos.bind(this)} />
+    <Nav keyDown={_.debounce(this.grabVideos.bind(this), 500)} />
     <div className="col-md-7">
       <VideoPlayer nowPlaying={this.state.nowPlaying} />
     </div>

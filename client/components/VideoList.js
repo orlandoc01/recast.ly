@@ -9,7 +9,8 @@ class VideoList extends React.Component {
         return (
             <div className="video-list media">
             {this.props.videoList ?
-             this.props.videoList.map( video => <VideoListEntry video={video} itemClick={this.props.listClick} />) :
+             this.props.videoList.map( video => 
+                <VideoListEntry video={video} itemClick={this.props.listClick} key = {video.etag} />) :
              "Please enter query in search bar"}
             </div>
         )
