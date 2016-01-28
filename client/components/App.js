@@ -17,7 +17,6 @@ class App extends React.Component {
 
   grabVideos(options) {
     window.searchYouTube(options, (queryResponse) => {
-      console.log(queryResponse);
       this.setState({
         videoList: queryResponse.items,
         nowPlaying: queryResponse.items[0]
@@ -29,7 +28,7 @@ class App extends React.Component {
   render() {
 
     return (<div>
-    <Nav />
+    <Nav keyDown={this.grabVideos.bind(this)} />
     <div className="col-md-7">
       <VideoPlayer nowPlaying={this.state.nowPlaying} />
     </div>

@@ -8,7 +8,7 @@ class Nav extends React.Component{
     return (
     <nav className="navbar">
       <div className="col-md-6 col-md-offset-3">
-        <Search />
+        <Search navType={this.props.keyDown}/>
       </div>
     </nav>
     );
