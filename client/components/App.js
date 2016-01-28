@@ -5,7 +5,7 @@ class App extends React.Component {
 
     this.state = {
       videoList: exampleVideoData,
-      nowPlaying: exampleVideoData[0]
+      nowPlaying: null
     };
   }
 
