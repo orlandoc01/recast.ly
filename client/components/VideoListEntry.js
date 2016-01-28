@@ -5,7 +5,10 @@ class VideoListEntry extends React.Component { //video Object
   }
 
   render() {
-    return (<div className="video-list-entry">
+    var entryClicked = function(videoObject) {
+      this.props.itemClick(videoObject);
+    };
+    return (<div className="video-list-entry" onClick={entryClicked.bind(this,this.props.video)}>
         <div className="media-left media-middle">
           <img className="media-object" src={this.props.video.snippet.thumbnails.default.url} alt="" />
         </div>
