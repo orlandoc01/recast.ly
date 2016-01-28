@@ -5,6 +5,7 @@ var searchYouTube = (options, callback) => {
       key: window.YOUTUBE_API_KEY,
       type: "video",
       max: 5,
+      videoEmbeddable: true
     };
 
   $.ajax({
