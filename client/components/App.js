@@ -4,7 +4,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      videoList: exampleVideoData,
+      videoList: null,
       nowPlaying: null
     };
   }
@@ -27,7 +27,8 @@ class App extends React.Component {
     }
     else {
       this.setState({
-        nowPlaying: null
+        nowPlaying: null,
+        videoList: null
       });
 
     }
