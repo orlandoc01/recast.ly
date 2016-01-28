@@ -15,7 +15,19 @@ class App extends React.Component {
     });
   }
 
+  grabVideos(options) {
+    window.searchYouTube(options, (queryResponse) => {
+      console.log(queryResponse);
+      this.setState({
+        videoList: queryResponse.items,
+        nowPlaying: queryResponse.items[0]
+      });
+    });
+  };
+
+
   render() {
+
     return (<div>
     <Nav />
     <div className="col-md-7">

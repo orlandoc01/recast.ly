@@ -16,7 +16,6 @@ var searchYouTube = (options, callback) => {
     dataType: 'json',
     success: function(data) {
       callback(data);
-      console.log(data);
     },
     error: function(data) {
       console.log(data);
@@ -26,13 +25,10 @@ var searchYouTube = (options, callback) => {
 
 window.searchYouTube = searchYouTube;
 
-var log = function(data) {
-  console.log(data)
-}
 
 // var options = {
 //   key: 'AIzaSyDvEaPTlv9zYqaGE9u-Tw5dq_YyDRKG3Uw',
 //   max: 5,
-//   query: 'game of thrones theme'
+//   q: 'game of thrones theme'
 // };
 // $(document).ready(function(){searchYouTube(options, log);});
