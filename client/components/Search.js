@@ -5,9 +5,8 @@ class Search extends React.Component {
   }
 
   render() {
-    var videoSearch = function() {
-      console.log("videoSearch has been called");
-      var query = "game of thrones"; /// grab text from input
+    var videoSearch = function(e) {
+      var query = e.target.value; /// grab text from input
       var queryObj = {q: query};
       this.props.navType(queryObj);
     }
